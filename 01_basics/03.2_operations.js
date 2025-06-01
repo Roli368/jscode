@@ -16,7 +16,7 @@ console.log(+"")// 0  ye nhi krna chahia */
 
 let gameCounter= 100
 ++gameCounter;
-console.log(gameCounter)
-gameCounter++;                  // 101 in both cases but pre and post increament
+console.log(gameCounter)  // 101 
+gameCounter++;                  // 102 
 console.log(gameCounter)
 
