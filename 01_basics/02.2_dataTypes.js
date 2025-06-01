@@ -23,5 +23,27 @@ let myobj={
 
 const myFunction=function(){
     console.log("hello world");
-    
+
 }
+
+//*********************************************************************************************************
+// memory two types stack(primitive) and heap(non-primitive)
+let myYoutubename="roli.com"
+let anothername=myYoutubename
+anothername="rolirathour.com"
+
+console.log(myYoutubename);     //roli.com
+console.log(anothername);       //rolirathour.com
+
+let userOne={
+    email:"abc@gamil.com",
+    upi:"abc@ibl",
+
+}
+
+let userTwo=userOne
+userTwo.email="roli@gmail.com"
+
+console.log(userOne.email);
+console.log(userTwo.email);     //roli@gail.com
+
