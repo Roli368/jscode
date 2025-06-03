@@ -37,11 +37,11 @@ if (isTeaReady) {
     
 }
 
-//to check array empty are not
-let Array=[]
-if (Array.length===0) {
-    console.log("Array is empty")
-} else {
-    console.log("Array is not empty")
+ //to check array empty are not
+ let Array=[]
+ if (Array.length===0) {
+     console.log("Array is empty")
+ } else {
+     console.log("Array is not empty")
     
-}
+ }
