@@ -40,7 +40,7 @@ let mycar = new car("toytata", "corola")          // these are object which star
 console.log(mycar.start())
 console.log(mycar.drive())
 let vehicleOne=new vehicle("torato","corola")
-console.log(vehicleOne)
+//console.log(vehicleOne)
 
 
 /* Key Features of JavaScript Classes:
@@ -103,3 +103,91 @@ new AnotherClass(); // Output: Unnamed class expression */
 
 
 // geegs for geegs inheritance  is with class with prototype etc
+// encaptulation  used to hide some data
+
+class BalanceAccount{
+        #balance = 0;
+        deposite(amount){
+          this.#balance+= amount ;
+          return this.#balance;
+        }
+        getbalance(){
+          return `$ ${this.#balance}`
+        }
+}
+let account = new BalanceAccount();
+console.log(account.getbalance());
+
+    // Abstraction
+    class coffeMachine{
+
+      start(){
+        // call DB 
+        //filter value
+        return `Starting the machine ..........`
+      }
+      brewCoffe(){
+        // complex calculaate
+        return `brewing coffe`
+      }
+      pressStartButton(){
+       let msgOne= this.start();
+       let msgTwo= this.brewCoffe();
+       return `${msgOne}+${msgTwo}`
+      }
+    }
+    let mycoffe = new coffeMachine();
+    //console.log(mycoffe.start())
+     //  console.log(mycoffe.brewCoffe())
+      // console.log(mycoffe.pressStartButton())
+
+
+       // polymorfism
+       // to show more than one form
+
+      //  class bird{
+      //   fly(){
+      //     return `flying .....`;
+      //   }
+      // }
+      //  class penguin extends bird{
+      //   fly(){
+      //   return `penguin can't fly`
+      //     }
+      //  }
+      //  let Bird= new bird();
+      //  let Penguin= new penguin();
+      //  console.log(bird.fly());
+      //  console.log(penguin.fly());
+
+      class Calculator {
+        static add (a,b){
+          return a+b ;
+        }
+
+      }
+      //console.log(Calculator.add(4,5))
+
+      class employee {
+        #salary;
+        constructor(worker,salary){
+          if (salary<0) {
+            throw new Error(" salary negative")
+          }
+          this.worker= worker;
+          this.#salary= salary;
+        }
+        get salary(){
+          return `u r not allowed to see salary`
+        }
+        set salary(value){
+          if (value<0) {
+            console.log("salary can not be negative")
+          } else {
+            return this._salary= value;
+          }
+        }
+      }
+      let emp= new employee("suresh",-50000)
+      console.log(emp._salary)
+      emp.salary=-333
